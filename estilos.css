@@ -22,4 +22,32 @@ width: 100%;
 background-image:url(imagenes/enlacespeq.png);
 background-size: 200px auto;
 }
+h1{
+    text-align: center;
+}
+.azul{
+    color: aquamarine;
+}
+/* Ocultar checkbox */ #futbol-toggle { display: none; } 
+/* Botón Fútbol */ .futbol-menu { display: flex; justify-content: space-between; align-items: center; padding: 18px 30px; color: white; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.25s; } 
+/* Efecto al pasar el ratón */ .futbol-menu:hover { background: #e00000; } 
+/* Símbolo + */ .futbol-menu span { font-size: 22px; transition: 0.3s; } 
+/* Subcategorías ocultas */ .subcategorias { max-height: 0; overflow: hidden; background: #111; transition: max-height 0.4s ease; } 
+/* Mostrar subcategorías */ #futbol-toggle:checked ~ .subcategorias { max-height: 250px; } 
+/* Enlaces secundarios */ .subcategorias a { display: block; padding: 12px 30px 12px 50px; color: #bdbdbd; text-decoration: none; font-size: 15px; font-weight: normal; transition: 0.25s; } 
+/* Hover de las categorías */ .subcategorias a:hover { color: white; background: #1c1c1c; padding-left: 60px; } 
+/* Cambiar + por − */ #futbol-toggle:checked + .futbol-menu span { transform: rotate(45deg); }
+.UEFA{
+    color: rgb(49, 105, 218);
+}
+.Selecciones{
+    color: greenyellow;
+}
+.Europa{
+    color: slateblue;
+}
+.América{
+    color: chocolate;
+}
+/* Efecto al pasar el ratón */ .UEFA-menu:hover { background: rgb(67, 115, 211); } 
 
