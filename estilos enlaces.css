@@ -1,0 +1,31 @@
+body{
+h1{
+    color: darkgoldenrod;
+    text-align: center;
+}
+border: 5px solid crimson;
+background-image:url(imagenes/fondoenlace2.png) ;
+background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
+background-size: cover;          /* Hace que la imagen cubra toda la pantalla */
+background-position: center;     /* Centra la imagen */
+background-attachment: fixed;    /* Mantiene el fondo fijo al hacer scroll */
+height: 180vh;                   /* Asegura que el body ocupe toda la altura */
+margin: 0;                       /* Elimina márgenes por defecto del navegador */
+}
+body{
+h3{
+  color: aliceblue;
+}
+}
+.morado{
+    color: darkmagenta;
+}
+.dorado{
+    color: darkgoldenrod;
+}
+footer{
+    border: 2px solid darkgoldenrod;
+    background-color: grey;
+    color: aliceblue;
+    text-align: center;
+}

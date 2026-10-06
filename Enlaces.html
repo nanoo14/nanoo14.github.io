@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Menú lateral</title> <style> /* Ocultamos el checkbox */ #menu-toggle { display: none; } /* Botón de las tres líneas */ .menu-button { position: fixed; top: 20px; left: 20px; width: 50px; height: 50px; background: #080808; border: 2px solid #e00000; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; cursor: pointer; z-index: 1001; } /* Las tres líneas */ .menu-button span { width: 26px; height: 3px; background: white; border-radius: 3px; transition: 0.3s; } /* Menú lateral */ .side-menu { position: fixed; top: 0; left: 0; width: 280px; height: 100vh; background: #080808; border-right: 2px solid #e00000; padding-top: 90px; transform: translateX(-100%); transition: transform 0.4s ease; z-index: 1000; } /* Abrir menú */ #menu-toggle:checked ~ .side-menu { transform: translateX(0); } /* Enlaces */ .side-menu a { display: block; padding: 18px 30px; color: white; text-decoration: none; font-size: 18px; font-weight: bold; transition: 0.25s; } .side-menu a:hover { background: #e00000; padding-left: 40px; } /* Convertir las tres líneas en X */ #menu-toggle:checked + .menu-button span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); } #menu-toggle:checked + .menu-button span:nth-child(2) { opacity: 0; } #menu-toggle:checked + .menu-button span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); } </style> </head> <body> <!-- Checkbox que controla el menú --> <input type="checkbox" id="menu-toggle"> <!-- Botón de tres líneas --> <label for="menu-toggle" class="menu-button"> <span></span> <span></span> <span></span> </label> <!-- Menú --> <nav class="side-menu"> <a href="Enlaces.html"><span class="dorado">Inicio</span></a> <a href="https://torrex8.github.io/" target="_blank"title="Dani">Página Dani</a> <a href="https://hugo1998pul.github.io/" target="_blank"title="Hugo">Página Hugo</a> <a href="https://asewer21.github.io/" target="_blank" title="Andrés">Página Andrés</a> <a href="https://hector828.github.io/" target="_blank" title="Héctor">Página Héctor</a> <p><a href="Página deportiva.html"><span class="morado">Volver</span></a></p></nav> </body>
+<body>
+    <link rel="stylesheet" href="estilos enlaces.css">
+    <section id="enlaces"> 
+        <h1><em>Enlaces a páginas</em></h1>
+    </section>
+    <head>
+        <p><a href="Página deportiva.html">Vover</a></p>
+    </head>
+    <main>
+        <p><h3>contactame a traves de <a href="mailto:fernandomculsan@gmail.com">fernandomculsan@gmail.com</a></h3></p>
+    </main>
+<header>
+        Dani   <a href="https://torrex8.github.io/" target="_blank"title="Dani">Página Dani</a>
+        Hugo   <a href="https://hugo1998pul.github.io/" target="_blank"title="Hugo">Página Hugo</a>
+        Andrés <a href="https://asewer21.github.io/" target="_blank" title="Andrés">Página Andrés</a>
+        Héctor <a href="https://hector828.github.io/" target="_blank" title="Héctor">Página Héctor</a>
+</header>
+<footer>
+    &copy; 2026 Fernando Marín
+</footer>
+</body>
+</html> 
