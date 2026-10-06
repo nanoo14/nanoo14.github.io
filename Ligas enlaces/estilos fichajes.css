@@ -1,0 +1,505 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.cabecera {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: #050505;
+
+    border-bottom: 2px solid #b00000;
+}
+
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e00000;
+}
+
+
+.cabecera nav {
+    display: flex;
+    gap: 10px;
+}
+
+.cabecera nav a {
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cabecera nav a:hover,
+.cabecera nav a.activo {
+    background: #c00000;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+    text-align: center;
+
+    padding: 55px 20px 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #170000,
+            #080808
+        );
+}
+
+
+.titulo h1 {
+    font-size: 55px;
+    font-weight: 900;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+
+.titulo p {
+    margin-top: 10px;
+
+    color: #aaa;
+
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+.linea {
+    width: 120px;
+    height: 3px;
+
+    background: #d00000;
+
+    margin: 20px auto;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto 70px;
+}
+
+
+/* =========================
+   FICHAJE
+========================= */
+
+.fichaje {
+
+    min-height: 190px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1.2fr
+        1.2fr
+        1.2fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #151515,
+            #0b0b0b
+        );
+
+    border: 1px solid #292929;
+
+    border-left: 5px solid #c00000;
+
+    transition: 0.3s;
+}
+
+
+.fichaje:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #d00000;
+
+    box-shadow:
+        0 10px 35px rgba(180, 0, 0, 0.25);
+}
+
+
+/* =========================
+   JUGADOR
+========================= */
+
+.jugador {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+.foto-gonzalo{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #c00000;
+    background: #222;
+
+}
+.foto-gonzalo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.foto-juanlu {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #c00000;
+    background: #222;
+    image-resolution: 300dpi;
+}
+
+
+
+.foto-juanlu img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.jugador h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+
+.posicion {
+
+    color: #d00000;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+/* =========================
+   BANDERA
+========================= */
+.bandera-españa{
+    width: 28px;
+    height: 18px;
+    object-fit: cover;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* =========================
+   EQUIPOS
+========================= */
+
+.equipo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 10px;
+}
+
+
+.escudo-rMadrid {
+    width: 70px;
+    height: 70px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+
+    border: 1px solid #333;
+
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.escudo-rMadrid img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+.escudo-fullham{
+    width: 70px;
+    height: 85px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+
+    border: 1px solid #333;
+
+    padding: 0;
+    overflow: hidden;
+}
+.escudo-fullham img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;    
+}
+.escudo-sevilla{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    border: 1px solid #333;
+    padding: 0;
+    overflow: hidden;    
+}
+.escudo-sevilla img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;   
+}
+
+.escudo-bournemouth{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    border: 1px solid #333;
+    padding: 0;
+    overflow: hidden;    
+}
+.escudo-bournemouth img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;   
+}
+
+
+.equipo span {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   OPERACIÓN
+========================= */
+
+.operacion {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.precio {
+
+    color: #ff3333;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+}
+
+
+.flecha {
+
+    font-size: 35px;
+
+    color: white;
+
+    font-weight: bold;
+}
+.fecha-fichaje{
+    color: #777;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #030303;
+
+    border-top: 1px solid #222;
+}
+
+
+footer p {
+
+    margin-top: 12px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 800px) {
+
+    .cabecera {
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+
+    .cabecera nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .titulo h1 {
+
+        font-size: 38px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .fichaje {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 25px;
+    }
+
+
+    .jugador {
+
+        justify-content: center;
+
+        flex-direction: column;
+    }
+
+
+    .operacion {
+
+        flex-direction: row;
+    }
+
+
+    .flecha {
+        transform: rotate(90deg);
+    }
+ 
+
+}
+ 
