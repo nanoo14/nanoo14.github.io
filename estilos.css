@@ -1,102 +1,801 @@
-body{
-background-image:url(imagenes/fondoinicio.png) ;
-background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
-background-size: cover;          /* Hace que la imagen cubra toda la pantalla */
-background-position: center;     /* Centra la imagen */
-background-attachment: fixed;    /* Mantiene el fondo fijo al hacer scroll */
-height: 180vh;                   /* Asegura que el body ocupe toda la altura */
-margin: 0;                       /* Elimina márgenes por defecto del navegador */
-color: aliceblue;
-}
-h2{
-    color: darkgoldenrod;
-}
-footer{
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
 
-color: aliceblue;
-background-repeat: repeat;
-background-position: center;
-background-attachment: fixed;
-height: 50px;
-margin: 0;  
-display: inline-block;
-text-align: center;
-padding: 5px 0px;
-width: 100%;
-background-size: 200px auto;
-background-color: #e00000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-    text-align: center;
+
+html {
+    min-height: 100%;
 }
-.azul{
-    color: aquamarine;
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #080808;
+    background-image: url("imagenes/fondoinicio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
-/* Ocultar checkbox */ #futbol-toggle { 
-    display: none; 
-} 
-/* Botón Fútbol */ .futbol-menu { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 18px 30px; 
-    color: white; 
-    font-size: 18px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    transition: 0.25s; 
-} 
-/* Efecto al pasar el ratón */ .futbol-menu:hover { 
-    background: #e00000; 
-} 
-/* Símbolo + */ .futbol-menu span { 
-    font-size: 22px; 
-    transition: 0.3s; 
-} 
-/* Subcategorías ocultas */ .subcategorias { 
-    max-height: 0; 
-    overflow: hidden; 
-    background: #111; 
-    transition: max-height 0.4s ease; 
-} 
-/* Mostrar subcategorías */ #futbol-toggle:checked ~ .subcategorias { 
-    max-height: 250px; 
-} 
-/* Enlaces secundarios */ .subcategorias a { 
-    display: block; 
-    padding: 12px 30px 12px 50px; 
-    color: #bdbdbd; 
-    text-decoration: none; 
-    font-size: 15px; 
-    font-weight: normal; 
-    transition: 0.25s; 
-} 
-/* Hover de las categorías */ .subcategorias a:hover { 
-    color: rgb(255, 255, 255); 
-    background: darkgoldenrod; 
-    padding-left: 60px; 
-     border-left: 3px solid #e00000;
-} 
-/* Cambiar + por − */ #futbol-toggle:checked + .futbol-menu span { 
-    transform: rotate(45deg); 
+
+
+/* =====================================
+   CABECERA
+===================================== */
+
+.cabecera {
+    min-height: 75px;
+    background: #0d0d0d;
+    border-bottom: 2px solid #a00000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 7%;
 }
-.UEFA{
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #c00000;
+}
+
+.navegacion-principal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.navegacion-principal a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s;
+    transition: translateY(-2px);
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal .activo {
+    color: #d00000;
+}
+
+
+/* =====================================
+   BOTÓN HAMBURGUESA
+===================================== */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    position: absolute;
+    top: 12.5px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #080808;
+    border: 2px solid #e00000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-button span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Animación para formar una X */
+
+#menu-toggle:checked + .menu-button span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-button span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* =====================================
+   MENÚ LATERAL
+===================================== */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    background: #080808;
+    border-right: 2px solid #e00000;
+    padding-top: 155px;
+    padding-bottom: 25px;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1001;
+}
+
+/* Abrir el menú */
+
+#menu-toggle:checked ~ .side-menu {
+    transform: translateX(0);
+}
+
+/* Enlaces principales del menú */
+
+.side-menu > a {
+    display: block;
+    padding: 18px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.25s, padding-left 0.25s;
+}
+
+.side-menu > a:hover {
+    background: #e00000;
+    padding-left: 40px;
+}
+
+
+/* =====================================
+   DESPLEGABLE DE FÚTBOL
+===================================== */
+
+#futbol-toggle {
+    display: none;
+}
+
+.futbol-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.futbol-menu:hover {
+    background: #e00000;
+}
+
+.flecha {
+    transition: transform 0.3s;
+}
+
+/* Girar flecha de Fútbol */
+
+#futbol-toggle:checked + .futbol-menu .flecha {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================
+   SUBCATEGORÍAS DE FÚTBOL
+===================================== */
+
+.subcategorias {
+    max-height: 0;
+    overflow: hidden;
+    background: #111;
+    transition: max-height 0.4s ease;
+}
+
+/* Mostrar categorías */
+
+#futbol-toggle:checked ~ .subcategorias {
+    max-height: 1000px;
+}
+
+/* Enlaces secundarios */
+
+.subcategorias > a {
+    display: block;
+    padding: 12px 30px 12px 50px;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.25s, padding-left 0.25s;
+}
+
+.subcategorias > a:hover {
+    color: white;
+    background: darkgoldenrod;
+    padding-left: 60px;
+    border-left: 3px solid #e00000;
+}
+
+
+/* Colores de categorías */
+
+.uefa {
     color: rgb(49, 105, 218);
 }
-.Selecciones{
+
+.selecciones {
     color: greenyellow;
 }
-.Europa{
-    color: slateblue;
-}
-.América{
+
+.america {
     color: chocolate;
 }
-/* Ocultar checkbox */ #li gas-europeas-toggle { display: none; } /* Botón Ligas Europeas */ .ligas-europeas-menu { display: flex; justify-content: space-between; align-items: center; padding: 12px 30px 12px 50px; color: #bdbdbd; font-size: 15px; cursor: pointer; transition: 0.25s; } /* Hover */ .ligas-europeas-menu:hover { color: white; background: #1c1c1c; } /* Símbolo + */ .ligas-europeas-menu span { font-size: 18px; transition: 0.3s; } /* Ligas ocultas */ .ligas-europeas { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; } /* Mostrar ligas */ #ligas-europeas-toggle:checked ~ .ligas-europeas { max-height: 500px; } /* Cada liga */ .ligas-europeas a { display: flex; align-items: center; gap: 10px; padding: 9px 30px 9px 70px; color: #999; text-decoration: none; font-size: 14px; transition: 0.25s; } /* Logos */ .ligas-europeas img { width: 22px; height: 22px; object-fit: contain; } /* Hover de las ligas */ .ligas-europeas a:hover { color: white; background: rgba(0, 51, 153, 0.25); padding-left: 78px; } /* Cambiar + por - */ #ligas-europeas-toggle:checked + .ligas-europeas-menu span { transform: rotate(45deg); }
+
+.azul {
+    color: aquamarine;
+}
+
+
+/* =====================================
+   LIGAS EUROPEAS
+===================================== */
+
 #ligas-europeas-toggle {
     display: none;
 }
-/* Ocultar checkbox de Ligas Europeas */
-#ligas-europeas-toggle {
-    display: none;
+
+.ligas-europeas-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px 12px 50px;
+    color: slateblue;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.ligas-europeas-menu:hover {
+    background: darkgoldenrod;
+    border-left: 3px solid #e00000;
+}
+
+/* Girar flecha de ligas */
+
+#ligas-europeas-toggle:checked + .ligas-europeas-menu .flecha {
+    transform: rotate(180deg);
+}
+
+/* Ocultar ligas */
+
+.ligas-europeas {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* Mostrar ligas */
+
+#ligas-europeas-toggle:checked ~ .ligas-europeas {
+    max-height: 500px;
+}
+
+/* Enlaces de las ligas */
+
+.ligas-europeas a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px 9px 65px;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.25s, padding-left 0.25s;
+}
+
+/* Logos de los equipos/competiciones */
+
+.ligas-europeas img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Efecto al pasar el ratón */
+
+.ligas-europeas a:hover {
+    color: white;
+    background: rgba(0, 51, 153, 0.25);
+    padding-left: 73px;
+}
+
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+===================================== */
+
+.principal {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* =====================================
+   NOTICIA DESTACADA
+===================================== */
+.cabecera-noticia-princ {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.noticiaprincipal {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto 40px;
+    background-color: #191919;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Etiqueta de la noticia */
+.live{
+    margin-left: 74%;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+    background-color: #e52432;
+    border-radius: 4px;
+    padding: 9px 16px;
+}
+.etiquetaTenis {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 16px;
+    margin: 20px 20px 12px;
+    border-radius: 4px;
+}
+
+/* Imagen */
+
+.imagen-noticia-princ {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Texto de la noticia */
+
+.contenido-noticia-princ {
+    padding: 25px;
+}
+
+/* Fecha */
+
+.fecha-princ {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Titular */
+
+.noticia h1 {
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    transition: color 0.3s;
+}
+
+.noticia:hover h1 {
+    color: #ff3948;
+}
+
+/* Descripción */
+
+.descripcion {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Botón */
+
+.boton-noticia-princ {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-noticia-princ:hover {
+    background-color: #b81422;
+    transform: translateY(-2px);
+}
+/* =====================================
+   NOTICIA 2
+===================================== */
+.cabecera-noticia-sec {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.noticiasecundaria {
+    width: 100%;
+    max-width: 850px;
+    margin-left: 20px auto 40px;
+    background-color: #191919;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Etiqueta de la noticia */
+
+.etiquetaFutbol {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 16px;
+    margin: 20px 20px 12px;
+    border-radius: 4px;
+}
+
+/* Imagen */
+
+.imagen-noticia-sec {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Texto de la noticia */
+
+.contenido-noticia-sec {
+    padding: 25px;
+}
+
+/* Fecha */
+
+.fecha-sec {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Titular */
+
+.noticia h1 {
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    transition: color 0.3s;
+}
+
+.noticia:hover h1 {
+    color: #ff3948;
+}
+
+/* Descripción */
+
+.descripcion {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Botón */
+
+.boton-noticia-sec {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-noticia-sec:hover {
+    background-color: #b81422;
+    transform: translateY(-2px);
+}
+/* =====================================
+   NOTICIA 3
+===================================== */
+.cabecera-noticia-terc {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.noticiaterciaria {
+    width: 100%;
+    max-width: 850px;
+    margin-left: 20px auto 40px;
+    background-color: #191919;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Etiqueta de la noticia */
+
+.etiquetaF1 {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 16px;
+    margin: 20px 20px 12px;
+    border-radius: 4px;
+}
+
+/* Imagen */
+
+.imagen-noticia-terc {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Texto de la noticia */
+
+.contenido-noticia-terc {
+    padding: 25px;
+}
+
+/* Fecha */
+
+.fecha-terc {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Titular */
+
+.noticia h1 {
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    transition: color 0.3s;
+}
+
+.noticia:hover h1 {
+    color: #ff3948;
+}
+
+/* Descripción */
+
+.descripcion {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Botón */
+
+.boton-noticia-terc {
+    display: inline-block;
+    background-color: #e52432;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-noticia-terc:hover {
+    background-color: #b81422;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   DISTRIBUCIÓN DE LAS NOTICIAS
+===================================== */
+
+.contenedor-noticias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 20px auto;
+    align-items: start;
+}
+
+/* NOTICIAS SECUNDARIA Y TERCIARIA */
+
+.noticiasecundaria,
+.noticiaterciaria {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    min-width: 0;
+}
+
+/* IMÁGENES ADAPTADAS A LAS TARJETAS */
+
+
+.imagen-noticia-sec,
+.imagen-noticia-terc {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* MÓVILES: UNA COLUMNA */
+
+@media (max-width: 700px) {
+    .contenedor-noticias {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .imagen-noticia-sec,
+    .imagen-noticia-terc {
+        height: 230px;
+    }
+}
+/* =====================================
+   FOOTER
+===================================== */
+
+.pie-pagina {
+    width: 100%;
+    margin-top: auto;
+    padding: 35px 20px;
+    text-align: center;
+    background: #030303;
+    border-top: 1px solid #a00000;
+}
+
+.pie-pagina p {
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   DISEÑO RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+    .cabecera {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 12px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .navegacion-principal {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navegacion-principal a {
+        font-size: 11px;
+    }
+
+    .menu-button {
+        top: 15px;
+        left: 15px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .side-menu {
+        padding-top: 75px;
+    }
+
+    .principal {
+        padding: 12px;
+    }
+
+    .imagen-noticia {
+        height: 260px;
+    }
+
+    .contenido-noticia {
+        padding: 20px;
+    }
+
+    .noticia h1 {
+        font-size: 25px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navegacion-principal {
+        gap: 10px;
+    }
+
+    .navegacion-principal a {
+        font-size: 10px;
+    }
+
+    .imagen-noticia {
+        height: 210px;
+    }
+
+    .noticia h1 {
+        font-size: 22px;
+    }
+
+    .etiqueta {
+        margin: 15px 15px 10px;
+    }
+
+    .contenido-noticia {
+        padding: 16px;
+    }
+
+    .pie-pagina {
+        padding: 25px 12px;
+    }
 }
