@@ -1,122 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página deportiva</title>
-    <meta name="keywords" content="futbol, tenis, atletismo, deportes">
-    <!-- las keywords no sirven hoy en dia-->
-     <meta name="description" content="Página de deportes actualizada">
-     <meta name="robots" content="index,follow">
-     <meta name="language" content="español">
-     <meta name="author" content="Fernando Martín">
-     <meta name="subject" content="Deportes">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    
+
+    <title>SPORTS EMOTION | Actualidad deportiva</title>
+
+    <meta name="keywords" content="fútbol, tenis, atletismo, deportes">
+    <meta name="description" content="Toda la actualidad deportiva en Sports Emotion">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Fernando Martín">
+
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="favicon-16x16.png">
+
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Menú lateral</title> <style> 
-/* Ocultamos el checkbox */ #menu-toggle { display: none; } 
-/* Botón de las tres líneas */ .menu-button { position: fixed; top: 20px; left: 20px; width: 50px; height: 50px; background: #080808; border: 2px solid #e00000; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; cursor: pointer; z-index: 1001; } 
-/* Las tres líneas */ .menu-button span { width: 26px; height: 3px; background: white; border-radius: 3px; transition: 0.3s; } 
-/* Menú lateral */ .side-menu { position: fixed; top: 0; left: 0; width: 280px; height: 100vh; background: #080808; border-right: 2px solid #e00000; padding-top: 90px; transform: translateX(-100%); transition: transform 0.4s ease; z-index: 1000; } 
-/* Abrir menú */ #menu-toggle:checked ~ .side-menu { transform: translateX(0); } 
-/* Enlaces */ .side-menu a { display: block; padding: 18px 30px; color: white; text-decoration: none; font-size: 18px; font-weight: bold; transition: 0.25s; } .side-menu a:hover { background: #e00000; padding-left: 40px; } 
-/* Convertir las tres líneas en X */ #menu-toggle:checked + .menu-button span:nth-child(1) { 
-transform: rotate(45deg) translate(6px, 6px); 
-} 
-#menu-toggle:checked + .menu-button span:nth-child(2) { 
-    opacity: 0; 
-} 
- #menu-toggle:checked + .menu-button span:nth-child(3) { 
-transform: rotate(-45deg) translate(6px, -6px); 
-} </style> </head> <body> <!-- Checkbox que controla el menú --> <input type="checkbox" id="menu-toggle"> <!-- Botón de tres líneas --> <label for="menu-toggle" class="menu-button"> <span></span> <span></span> <span></span> </label> <!-- Menú --> <nav class="side-menu"> <a href="#">Inicio</a> <a href="#">Fútbol</a><!-- Fútbol -->
-<input type="checkbox" id="futbol-toggle">
 
-<label for="futbol-toggle" class="futbol-menu">
-    Fútbol
-    <span>+</span>
-</label>
-
-<!-- Subcategorías -->
-<div class="subcategorias">
-
-    <!-- Ligas Europeas -->
-    <input type="checkbox" id="ligas-europeas-toggle">
-
-    <label for="ligas-europeas-toggle" class="ligas-europeas-menu">
-        Ligas Europeas
-        <span>+</span>
-    </label>
-
-    <!-- Ligas -->
-    <div class="ligas-europeas">
-
-        <a href="Ligas enlaces/Premier.html">
-            <img src="logos/premier-league.avif" alt="Premier League">
-            <span>Premier League</span>
-        </a>
-
-        <a href="#">
-            <img src="logos/laliga.webp" alt="LaLiga">
-            <span>LaLiga</span>
-        </a>
-
-        <a href="#">
-            <img src="logos/serie-a.svg" alt="Serie A">
-            <span>Serie A</span>
-        </a>
-
-        <a href="#">
-            <img src="logos/bundesliga.webp" alt="Bundesliga">
-            <span>Bundesliga</span>
-        </a>
-
-        <a href="#">
-            <img src="logos/primeira-liga.png" alt="Primeira Liga">
-            <span>Primeira Liga</span>
-        </a>
-
-        <a href="#">
-            <img src="logos/ligue-1.png" alt="Ligue 1">
-            <span>Ligue 1</span>
-        </a>
-
-    </div>
-
-    <a href="#"><span class="UEFA">UEFA</span></a>
-    <a href="#"><span class="Selecciones">Selecciones</span></a>
-    <a href="#"><span class="América">Ligas Americanas</span></a>
-
-</div> <a href="#">Atletismo</a> <a href="#">Baloncesto</a> <a href="#">Motor</a> <a href="Contacto.html" target="_blank"title="Contacto"><span class="azul">Contacto</span></a> <a href="Enlaces.html" target="_blank"title="Enlaces"><span class="azul">Enlaces</span></a></nav> </body>
 <body>
 
-    
-<link rel="stylesheet" href="estilos.css">
-    <header>
-        <h1>Página deportiva</h1>
-   
-   
-    </header>
-    <nav>
-       
-    </nav>
-    <main>
- <section id="contenido">
-    <h2><em>La Champions</em></h2>
-    <article>
-        <h3><mark>Atleti</mark></h3>
-        <p>Como dijo el Cholo</p>
-        <blockquote>Ser o no ser</blockquote>
-        <p><strong><i>Lorem</i></strong> ipsum dolor emsit amet consectetur adipisicing elit. Temporibus nesciunt laboriosam itaque corporis recusandae qui tenetur illum ea. <s>Placeat</s>, laborum nam. Aperiam nulla doloremque illo temporibus. Porro aperiam sit sapiente!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam eius laudantium id asperiores voluptas ducimus nobis repellat dolorum, odio quos veniam corporis incidunt atque accusantium. Accusantium dignissimos labore sed itaque?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci sed quos amet velit veritatis cumque placeat consequuntur quo, inventore voluptatum nobis obcaecati ipsum. Nobis nulla aspernatur aliquid explicabo incidunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolor exercitationem a, corporis explicabo culpa nisi perspiciatis eveniet neque voluptatum asperiores illum, omnis vel in earum itaque porro totam quis.</p>
-    </article>
- </section> 
- </body>   
-</main>
+    <!-- CABECERA PRINCIPAL -->
+    <header class="cabecera">
 
-<footer>
-    <blockquote>&copy; 2026 Fernando Marín</blockquote>
-</footer>
+        <a href="SportsEmotion.html" class="logo">
+            SPORTS<span>EMOTION</span>
+        </a>
+
+        <nav class="navegacion-principal">
+            <a href="SportsEmotion.html" class="activo">Inicio</a>
+            <a href="Clasificacion PL.html">Resultados en Directo</a>
+            <a href="noticias.html">Favoritos</a>
+            <a href="Cabecera/Explorar.html"target= "_blank">Explorar</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CHECKBOX DEL MENÚ HAMBURGUESA -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- BOTÓN DE LAS TRES LÍNEAS -->
+    <label for="menu-toggle" class="menu-button"aria-label="Abrir o cerrar el menú">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </label>
+
+
+    <!-- MENÚ LATERAL -->
+    <nav class="side-menu" aria-label="Menú de deportes">
+
+        <a href="SportsEmotion.html">Inicio</a>
+
+        <!-- DESPLEGABLE DE FÚTBOL -->
+        <input type="checkbox" id="futbol-toggle">
+
+        <label for="futbol-toggle" class="futbol-menu">
+            Fútbol <span class="flecha">⌄</span>
+        </label>
+
+        <div class="subcategorias">
+
+            <!-- LIGAS EUROPEAS -->
+            <input type="checkbox" id="ligas-europeas-toggle">
+
+            <label for="ligas-europeas-toggle"class="ligas-europeas-menu">
+                Ligas Europeas <span class="flecha">⌄</span>
+            </label>
+            <!-- LISTA DE LIGAS -->
+            <div class="ligas-europeas">
+                <a href="Ligas enlaces/Premier.html">
+                    <img src="logos/premier-league.avif"alt="Logo de la Premier League">
+                    <span>Premier League</span>
+                </a>
+                <a href="#">
+                    <img src="logos/laliga.webp"alt="Logo de LaLiga">
+                    <span>LaLiga</span>
+                </a>
+                <a href="#">
+                    <img src="logos/serie-a.svg"alt="Logo de Serie A">
+                    <span>Serie A</span>
+                </a>
+                <a href="#">
+                    <img src="logos/bundesliga.webp"alt="Logo de Bundesliga">
+                    <span>Bundesliga</span>
+                </a>
+                <a href="#">
+                    <img src="logos/primeira-liga.png"alt="Logo de Primeira Liga">
+                    <span>Primeira Liga</span>
+                </a>
+                <a href="#">
+                    <img src="logos/ligue-1.png"alt="Logo de Ligue 1">
+                    <span>Ligue 1</span>
+                </a>
+            </div>
+
+            <!-- OTRAS CATEGORÍAS DE FÚTBOL -->
+            <a href="#"><span class="uefa">UEFA</span></a>
+
+            <a href="#">
+                <span class="selecciones">Selecciones</span>
+            </a>
+
+            <a href="#">
+                <span class="america">Ligas Americanas</span>
+            </a>
+
+        </div>
+
+        <!-- RESTO DE DEPORTES -->
+        <a href="#">Atletismo</a>
+        <a href="#">Baloncesto</a>
+        <a href="#">Motor</a>
+
+        <a href="Contacto.html" target="_blank">
+            <span class="azul">Contacto</span>
+        </a>
+        <a href="Enlaces.html" target="_blank">
+            <span class="azul">Enlaces</span>
+        </a>
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="principal">
+        <!-- NOTICIA DESTACADA -->
+        <article class="noticiaprincipal">
+            <div class="cabecera-noticia-princ">
+                <div class="etiquetaTenis">TENIS</div>
+                <div class="live">🔘 Live</div>
+            </div>
+            <img src="imagenes noticias/djokovic_shangai.webp" alt="Derrota de Novak Djokovic en Shanghái"class="imagen-noticia-princ">
+            <div class="contenido-noticia-princ">
+                <p class="fecha-princ">9 octubre 2026 · 4 min de lectura</p>
+                <h1>Un fundido Djokovic cae a la primera en Shanghái</h1>
+                <p class="descripcion">El serbio, con evidentes muestras de cansancio en el segundo set, es eliminado por un gran Hurkacz por 6-4 y 6-3, y se aleja de la Copa de Maestros</p>
+                <a href="" class="boton-noticia-princ">Leer noticia completa →</a>
+            </div>
+        </article>
+        <div class="contenedor-noticias">
+        <!-- NOTICIA SECUNDARIA -->
+         <article class="noticiasecundaria">
+            <div class="cabecera-noticia-sec">
+                <div class="etiquetaFutbol">Futbol</div>
+            </div>
+            <img src="imagenes noticias/mou_mbappe.webp" alt="José Mourinho sobre Kylian Mbappé"class="imagen-noticia-sec">
+            <div class="contenido-noticia-sec">
+                <p class="fecha-sec">9 octubre 2026 · 3 min de lectura</p>
+                <h1>Mourinho desmiente campañas mediáticas sobre el estado de Mbappé</h1>
+                <p class="descripcion">El director técnico del Real Madrid, José Mourinho, calificó de «ridícula» la controversia creada por sectores de la prensa en torno al delantero francés Kylian Mbappé durante la conferencia previa al partido de la jornada 8 de LaLiga EA Sports frente al Villarreal</p>
+                <a href="" class="boton-noticia-sec">Leer noticia completa →</a>
+            </div>
+         </article>
+         <!-- NOTICIA TERCIARIA -->
+         <article class="noticiaterciaria">
+            <div class="cabecera-noticia-terc">
+                <div class="etiquetaF1">F1</div>
+            </div>
+            <img src="imagenes noticias/fernando_qualysgp2026.webp" alt="Fernando Alondo sobre la Csasificacion de Singapur "class="imagen-noticia-terc">
+            <div class="contenido-noticia-terc">
+                <p class="fecha-terc">9 octubre 2026 · 5 min de lectura</p>
+                <h1>Alonso, decepcionado pese a caer en SQ2: "La vuelta era lo bastante buena para SQ3"</h1>
+                <p class="descripcion">Fernando Alonso tenía la esperanza de llegar a la SQ3 en el Gran Premio de Singapur, un circuito en el que las desventajas del motor Honda son menos relevantes. Sin embargo, pese a una buena vuelta en la SQ2, el piloto asturiano se sorprendió por haber quedado lejos de llegar a esa última ronda.</p>
+                <a href="" class="boton-noticia-terc">Leer noticia completa →</a>
+         </article>
+         </div>
+    </main>
+
+
+
+
+    <footer class="pie-pagina">
+        <a href="SportsEmotion.html" class="logo">
+            SPORTS<span>EMOTION</span>
+        </a>
+        <p>© 2026 Sports Emotion - Toda la actualidad deportiva</p>
+    </footer>
+
+</body>
 </html>
