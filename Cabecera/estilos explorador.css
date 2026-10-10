@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("imagenes/fondoinicio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* =====================================
+   CABECERA
+===================================== */
+
+.cabecera {
+    min-height: 75px;
+    background: #0d0d0d;
+    border-bottom: 2px solid #a00000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 15px 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #c00000;
+}
+
+.navegacion-principal {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.navegacion-principal a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal .activo {
+    color: #d00000;
+}
+/* =====================================
+   FOOTER
+===================================== */
+
+.pie-pagina {
+    width: 100%;
+    margin-top: auto;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #030303;
+    border-top: 2px solid #a00000;
+}
+
+.pie-pagina p {
+    margin-top: 12px;
+
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
